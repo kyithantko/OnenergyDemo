@@ -18,6 +18,7 @@ import {useSelector} from 'react-redux';
 import dayjs from 'dayjs';
 import routes from '../../constants/routes';
 import SwiperList from '../../components/SwiperList';
+import RectanglePie from '../../components/RectanglePie';
 
 export default function HomePage({navigation}) {
   const [consump, setConsump] = React.useState('kwh');
@@ -103,11 +104,14 @@ export default function HomePage({navigation}) {
         <View
           style={{
             backgroundColor: '#ffffff',
-            height: 100,
+            height: 350,
             borderRadius: 15,
             width: '94%',
+            padding: 20,
             marginTop: 20,
-          }}></View>
+          }}>
+          <RectanglePie />
+        </View>
         <View
           style={{
             backgroundColor: '#ffffff',
