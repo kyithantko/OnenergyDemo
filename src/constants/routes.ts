@@ -4,7 +4,8 @@ const routes = {
   HOME: 'HOME',
   SETTINGS: 'SETTINGS',
   NOTI: 'NOTIFICATION',
-  CALENDAR: 'CALENDAR'
+  CALENDAR: 'CALENDAR',
+  APPLIANCE:'APPLIANCE'
 };
 
 export default routes;
