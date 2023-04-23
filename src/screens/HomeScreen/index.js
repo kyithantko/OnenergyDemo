@@ -17,6 +17,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useSelector} from 'react-redux';
 import dayjs from 'dayjs';
 import routes from '../../constants/routes';
+import SwiperList from '../../components/SwiperList';
 
 export default function HomePage({navigation}) {
   const [consump, setConsump] = React.useState('kwh');
@@ -51,7 +52,7 @@ export default function HomePage({navigation}) {
         />
       </TouchableOpacity>
       <ScrollView
-        contentContainerStyle={{flex: 1, alignItems: 'center'}}
+        contentContainerStyle={{alignItems: 'center'}}
         style={{
           backgroundColor: '#F4F2F4',
           marginTop: -20,
@@ -355,6 +356,7 @@ export default function HomePage({navigation}) {
             </>
           )}
         </View>
+
         <View
           style={{
             backgroundColor: '#ffffff',
@@ -461,6 +463,15 @@ export default function HomePage({navigation}) {
             </View>
             <Text>9.5</Text>
           </View>
+        </View>
+        <View
+          style={{
+            height: 100,
+            marginBottom: 130,
+            marginTop: 20,
+            marginHorizontal: 15,
+          }}>
+          <SwiperList />
         </View>
       </ScrollView>
     </SafeAreaView>
