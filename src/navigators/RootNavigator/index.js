@@ -4,6 +4,7 @@ import LoginScreen from '../../screens/LoginScreen';
 import TabNavigator from '../TabNavigator';
 import Notification from '../../screens/HomeScreen/Notification';
 import Calendar from '../../screens/HomeScreen/Calendar';
+import Info from '../../screens/ApplianceScreen/Info';
 import {TouchableOpacity} from 'react-native';
 import {COLOURS} from '../../theme/paper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -58,6 +59,11 @@ function RootNavigator() {
       <Stack.Screen
         name={routes.CALENDAR}
         component={Calendar}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={routes.INFO}
+        component={Info}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

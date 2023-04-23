@@ -125,7 +125,7 @@ export default function AppliancePage({navigation}) {
           Total Appliances : 7
         </Text>
         {data.map(x => (
-          <View
+          <TouchableOpacity
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
@@ -136,7 +136,8 @@ export default function AppliancePage({navigation}) {
               width: '97%',
               paddingHorizontal: 15,
               marginTop: 15,
-            }}>
+            }}
+            onPress={() => navigation.navigate(routes.INFO)}>
             <View
               style={{
                 flexDirection: 'row',
@@ -164,7 +165,7 @@ export default function AppliancePage({navigation}) {
               }}>
               {x.price}
             </Text>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </SafeAreaView>
