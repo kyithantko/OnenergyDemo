@@ -1,11 +1,13 @@
 import * as React from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {
   MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
 } from 'react-native-paper';
 import {NavigationContainer} from '@react-navigation/native';
 import RootNavigator from './navigators/RootNavigator';
+import {Provider} from 'react-redux';
+import store from './redux/store';
 
 const theme = {
   ...DefaultTheme,
@@ -18,13 +20,13 @@ const theme = {
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <PaperProvider theme={theme}>
+    <PaperProvider>
+      <Provider store={store}>
         <NavigationContainer>
           <RootNavigator />
         </NavigationContainer>
-      </PaperProvider>
-    </SafeAreaProvider>
+      </Provider>
+    </PaperProvider>
   );
 };
 

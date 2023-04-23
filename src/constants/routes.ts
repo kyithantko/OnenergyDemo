@@ -3,6 +3,8 @@ const routes = {
   TAB: 'TAB',
   HOME: 'HOME',
   SETTINGS: 'SETTINGS',
+  NOTI: 'NOTIFICATION',
+  CALENDAR: 'CALENDAR'
 };
 
 export default routes;
